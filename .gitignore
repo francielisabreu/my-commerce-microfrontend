@@ -1,5 +1,5 @@
 #ignore folder
 products/node_modules/
-container_ecomm/node_modules/
+container/node_modules/
 dist/
 products/webpack.config.js
