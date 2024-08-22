@@ -1,4 +1,0 @@
-#ignore folder
-node_modules/
-dist/
-products/webpack.config.js
