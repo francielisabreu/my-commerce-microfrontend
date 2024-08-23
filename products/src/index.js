@@ -9,4 +9,4 @@ productName.forEach((name) => {
   products += `<div>${name}</div>`;
 });
 
-console.log(products);
+document.querySelector("#dev-products").innerHTML = products;
