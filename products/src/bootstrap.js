@@ -1,12 +1,18 @@
 import faker from "faker";
 
-let products = "";
-const productName = Array.from({ length: 6 }, () =>
-  faker.commerce.productName()
-);
+const mount = (el) => {
+  let products = "";
 
-productName.forEach((name) => {
-  products += `<div>${name}</div>`;
-});
-
-document.querySelector("#dev-products").innerHTML = products;
+  for (let i = 0; i < 5; i++) {
+    const name = faker.commerce.productName();
+    products += `<div>${name}</div>`;
+  }
+  el.innerHTML = products;
+};
+if (process.env.NODE_ENV === "development") {
+  const el = document.querySelector("#dev-products");
+  if (el) {
+    mount(el);
+  }
+}
+export { mount };
